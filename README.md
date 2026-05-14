@@ -1,4 +1,4 @@
-# The goose Brand V2.0.0
+# The goose Brand V1.0.0
 
 Sistema de automatización avanzado para la conciliación de facturas y guías de transporte.
 
