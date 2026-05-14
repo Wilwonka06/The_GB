@@ -141,14 +141,7 @@ The goose Brand opera bajo una metodología secuencial y robusta, con manejo de 
 
 ## 5. Instalación y Configuración
 
-### 5.1 Requisitos del Sistema
-*   **Sistema Operativo**: Windows 10/11 (compatible con PowerShell).
-*   **Python**: Versión 3.10 o superior (recomendado 3.11+).
-*   **Memoria RAM**: Mínimo 4GB, recomendado 8GB+ para procesamiento de grandes volúmenes de PDFs.
-*   **Espacio Disco**: 500MB para instalación + espacio para archivos temporales.
-*   **Conectividad**: Acceso a internet para descarga de dependencias y conexión a SAP WebGUI.
-
-### 5.2 Instalación Paso a Paso
+### 5.1 Instalación Paso a Paso
 
 1.  **Clonación/Descarga del Proyecto**:
     ```bash
@@ -185,10 +178,10 @@ The goose Brand opera bajo una metodología secuencial y robusta, con manejo de 
     python -c "import pandas, playwright, customtkinter; print('Instalación exitosa')"
     ```
 
-### 5.3 Configuración Inicial
+### 5.2 Configuración Inicial
 
 1.  **Ejecución por Primera Vez**:
-    - Ejecutar `main.py` o `interfaz.py` directamente.
+    - Ejecutar `main.py` directamente.
     - La aplicación se abrirá en modo interfaz gráfica.
 
 2.  **Configuración de Rutas** (Obligatorio):
@@ -203,7 +196,7 @@ The goose Brand opera bajo una metodología secuencial y robusta, con manejo de 
     - Intentar ejecutar un pipeline de prueba pequeño.
     - Verificar logs para errores de rutas o permisos.
 
-### 5.4 Paquetes y Dependencias Detalladas
+### 5.3 Paquetes y Dependencias Detalladas
 *   `pandas>=2.0.0`: Manipulación y análisis de datos tabulares, cruces de información.
 *   `playwright>=1.40.0`: Automatización de navegadores para interacción con SAP WebGUI.
 *   `pdfplumber>=0.10.0`: Extracción de texto y datos de archivos PDF.
@@ -212,7 +205,7 @@ The goose Brand opera bajo una metodología secuencial y robusta, con manejo de 
 *   `pathlib` (estándar): Manejo de rutas del sistema de archivos.
 *   `datetime` (estándar): Gestión de fechas y filtros temporales.
 
-### 5.5 Compilación a Ejecutable (Opcional)
+### 5.4 Compilación a Ejecutable (Opcional)
 Para distribuir la aplicación como ejecutable standalone sin requerir Python instalado:
 
 ```bash

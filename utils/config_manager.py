@@ -1,6 +1,6 @@
 """
 GESTOR DE CONFIGURACIÓN - The goose Brand
-Maneja la persistencia de rutas en config_indigo.ini
+Maneja la persistencia de rutas en config_TGB.ini
 """
 
 import configparser
@@ -9,7 +9,7 @@ from typing import Optional
 
 
 class ConfiguradorNewIndigo:
-    CONFIG_FILE = Path("config_indigo.ini")
+    CONFIG_FILE = Path("config_TGB.ini")
 
     def __init__(self):
         self.config = configparser.ConfigParser()
