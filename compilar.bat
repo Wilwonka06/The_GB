@@ -9,8 +9,9 @@ echo.
 set "PROJECT_DIR=%~dp0"
 cd /d "%PROJECT_DIR%"
 
-set "DEFAULT_OUTPUT=%PROJECT_DIR%dist"
 set OUTPUT_BASE=O:\Finanzas\Info Bancos\Pagos Internacionales\The Goose Brand
+set "DEFAULT_OUTPUT=%OUTPUT_BASE%"
+
 if "%OUTPUT_BASE%"=="" set "OUTPUT_BASE=%DEFAULT_OUTPUT%"
 
 if not exist "%OUTPUT_BASE%" mkdir "%OUTPUT_BASE%"
@@ -32,15 +33,16 @@ echo.
 echo Limpiando compilaciones anteriores...
 if exist build rmdir /s /q build
 if exist dist rmdir /s /q dist
-if exist "The goose Brand.spec" del /q "The goose Brand.spec"
+if exist "The goose Brand RPA.spec" del /q "The goose Brand RPA.spec"   
 
 echo.
-echo Creando ejecutable (incluyendo dependencias visuales)...
-pyinstaller --noconfirm --onedir --windowed --name "The goose Brand" --collect-all customtkinter main.py
+echo Creando ejecutable directamente en la ruta de destino con icono...
+pyinstaller --noconfirm --onedir --windowed --name "The goose Brand RPA" --icon "icono.ico" --distpath "%OUTPUT_BASE%" --collect-all customtkinter main.py
 
 echo.
 echo ==========================================
 echo    ¡Proceso completado con exito!
-echo    Revisa la carpeta "dist\The goose Brand"
+echo    La aplicacion esta lista en:
+echo    "%OUTPUT_BASE%\The goose Brand RPA"
 echo ==========================================
 pause

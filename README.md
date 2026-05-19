@@ -213,7 +213,7 @@ Para distribuir la aplicación como ejecutable standalone sin requerir Python in
 compilar.bat
 ```
 
-Esto genera una carpeta `dist\The goose Brand` con el ejecutable portable, incluyendo todas las dependencias y Chromium embebido.
+Esto genera el ejecutable directamente en la ruta de red configurada: `O:\Finanzas\Info Bancos\Pagos Internacionales\The Goose Brand`, incluyendo todas las dependencias y Chromium embebido.
 
 ---
 
@@ -242,7 +242,7 @@ Para soporte técnico, reportes de bugs, solicitudes de nuevas funcionalidades o
 *   **Compatibilidad PDF:** El sistema funciona mejor con PDFs de texto plano. PDFs escaneados requieren OCR, que puede ser menos preciso.
 
 ### 7.3 Compilación y Distribución
-*   **Compilación Standalone:** Usar `compilar.bat` para generar ejecutable portable con PyInstaller. Incluye Chromium embebido para evitar instalación adicional.
+*   **Compilación:** Use `compilar.bat` para generar el ejecutable. La salida se enviará directamente a la ruta de red configurada: `O:\Finanzas\Info Bancos\Pagos Internacionales\The Goose Brand`.
 *   **Distribución:** El ejecutable generado es autocontenido y puede copiarse a cualquier máquina Windows sin instalación de Python.
 *   **Dependencias Externas:** Requiere acceso a rutas de red configuradas y conectividad a SAP WebGUI.
 

@@ -49,6 +49,14 @@ class NewIndigoApp(ctk.CTk):
         self.minsize(800, 580)
         self.configure(fg_color=COLOR_BG)
 
+        # Establecer el icono de la ventana
+        try:
+            ruta_icono = Path(__file__).parent / "icono.ico"
+            if ruta_icono.exists():
+                self.iconbitmap(str(ruta_icono))
+        except Exception as e:
+            logger.warning(f"No se pudo cargar el icono de la ventana: {e}")
+
         self.config_manager = ConfiguradorNewIndigo()
         self.config_manager.cargar_config()
 
