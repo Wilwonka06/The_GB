@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Optional
 
 
-class ConfiguradorNewIndigo:
+class ConfiguradorTheGooseBrand:
     CONFIG_FILE = Path("config_TGB.ini")
 
     def __init__(self):

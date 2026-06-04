@@ -18,7 +18,7 @@ from tkinter import filedialog, messagebox
 
 import customtkinter as ctk
 
-from utils.config_manager import ConfiguradorNewIndigo
+from utils.config_manager import ConfiguradorTheGooseBrand
 from core.pipeline import ejecutar_pipeline
 from models.reporte import Reporte
 
@@ -41,7 +41,7 @@ MAX_LOG_LINES = 400   # Límite de líneas en el log para no saturar la GUI
 logger = logging.getLogger(__name__)
 
 
-class NewIndigoApp(ctk.CTk):
+class TheGooseBrandApp(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("The goose Brand — Pipeline de Facturación")
@@ -57,7 +57,7 @@ class NewIndigoApp(ctk.CTk):
         except Exception as e:
             logger.warning(f"No se pudo cargar el icono de la ventana: {e}")
 
-        self.config_manager = ConfiguradorNewIndigo()
+        self.config_manager = ConfiguradorTheGooseBrand()
         self.config_manager.cargar_config()
 
         self._queue: queue.Queue = queue.Queue()
@@ -318,7 +318,7 @@ class NewIndigoApp(ctk.CTk):
         rutas = self.config_manager.obtener_rutas() or {}
 
         campos = [
-            ("Excel Historial (NEW_INDIGO):", "ruta_maestro"),
+            ("Excel Historial (Historial TGB.xlsx):", "ruta_maestro"),
             ("Ruta de búsqueda (PDFs fuente):", "ruta_busqueda"),
             ("Ruta destino (O:\\Finanzas\\...):", "ruta_destino"),
         ]

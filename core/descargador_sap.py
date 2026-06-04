@@ -45,7 +45,7 @@ def descargar_reporte_sap(ruta_destino: Path) -> bool:
                 logger.info("Exportando archivo...")
                 page.locator("#userarealist0").press("Shift+F4")
 
-                page.get_by_role("textbox", name="Nom.arch.").fill("soporte_new_indigo")
+                page.get_by_role("textbox", name="Nom.arch.").fill("soporte_the_goose_brand")
                 page.get_by_role("button", name="Exportar a...").click()
                 with page.expect_download() as download_info:
                     with page.expect_popup() as page1_info:

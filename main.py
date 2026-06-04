@@ -3,7 +3,7 @@ import os
 os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "0"
 
 import logging
-from interfaz import NewIndigoApp
+from interfaz import TheGooseBrandApp
 
 if __name__ == "__main__":
     logging.basicConfig(    
@@ -11,5 +11,5 @@ if __name__ == "__main__":
         format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
         datefmt="%H:%M:%S",
     )
-    app = NewIndigoApp()
+    app = TheGooseBrandApp()
     app.mainloop()
